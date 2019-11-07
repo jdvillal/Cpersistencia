@@ -1,14 +1,14 @@
-usuarios: main.o validar.o guardar.o
-	gcc -o usuarios main.o validar.o guardar.o
+usuarios: main.o validar.o persistencia.o
+	gcc -o usuarios main.o validar.o persistencia.o
 
-main.o: main.c validar.h guardar.h 
+main.o: main.c validar.h persistencia.h 
 	gcc -c main.c
 
 validar.o: validar.c validar.h
 	gcc -c validar.c
 
-guardar.o: guardar.c guardar.h validar.h
-	gcc -c guardar.c
+guardar.o: persistencia.c persistencia.h validar.h
+	gcc -c persistencia.c
 
 .PHONY: clean
 clean:
