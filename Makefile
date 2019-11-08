@@ -12,4 +12,4 @@ guardar.o: persistencia.c persistencia.h validar.h
 
 .PHONY: clean
 clean:
-	rm *.o usuarios
+	rm *.o usuarios usuarios.txt
